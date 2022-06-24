@@ -1,8 +1,21 @@
-import React, { Component } from "react";
-// import logo from "/Users/olesiati/Desktop/greateats/src/logo.svg";
+import React from "react";
 import "./App.css";
 import BusinessList from "../BusinessList/BusinessList.js";
 import SearchBar from "../SearchBar/SearchBar.js";
+
+const business = {
+  imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+  name: "MarginOtto Pizzeria",
+  address: "1010 Paddington Way",
+  city: "Flavortown",
+  state: "NY",
+  zipCode: "10101",
+  category: "Italian",
+  rating: 4.5,
+  reviewCount: 90,
+};
+
+const businesses = [business, business, business, business, business, business];
 
 class App extends React.Component {
   render() {
@@ -10,7 +23,7 @@ class App extends React.Component {
       <div className="App">
         <h1>GreatEats</h1>
         <SearchBar />
-        <BusinessList />
+        <BusinessList businesses={businesses} />
       </div>
     );
   }
