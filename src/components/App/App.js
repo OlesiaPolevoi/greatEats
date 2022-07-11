@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
 
 import Yelp from "../../util/Yelp";
+
+// function App() {
+//   const [businesses, setBusinesses] = useState([]);
+
+//   const searchYelp = (term, location, sortBy) => {
+//     Yelp.search(term, location, sortBy).then((businesses) => {
+//       setBusinesses({ businesses: businesses });
+//     });
+//   };
+
+//   return (
+//     <div className="App">
+//       <h1>greatEats</h1>
+//       <SearchBar searchYelp={searchYelp} />
+//       <BusinessList businesses={businesses} />
+//     </div>
+//   );
+// }
+
+// export default App;
 
 class App extends React.Component {
   constructor(props) {
